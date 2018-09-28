@@ -1,6 +1,6 @@
-export const googleAPIKey = 'AIzaSyBG0SybP0EKWH3Jvwki7IR5AMyO_cUeeQc'
+export const googleAPIKey = ''
 
-export const BASE_URL = 'http://localhost:3001';
+export const BASE_URL = '';
 export const ROUTE_API = '/route'
 
 export const SUCCESS = 'success';
