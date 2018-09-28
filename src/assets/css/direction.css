@@ -1,0 +1,11 @@
+.direction-detail-form .btn-primary{
+    width: 80%;
+    margin: 10px;
+}
+.direction-detail-form{
+    margin-top: 30px;
+}
+.direction-detail-form .title{
+    font-size:  20px;
+    margin-left: 25px;
+}
