@@ -59,12 +59,12 @@ class App extends Component {
             <DirectionForm
               onSubmit={this.formSubmit}
               onReset={this.resetApp}
-            />
-            <DirectionDetail
-              direction={this.state.direction}
-              onSubmit={this.getDirection}
-              onReset={this.resetApp}
-            />
+              submitBtnText={this.state.direction && this.state.token ? "Re-submit":"Submit"}
+            >
+              <DirectionDetail
+                direction={this.state.direction}
+              />
+            </DirectionForm>
           </div>
           <div className="col-md-8 col-sm-12">
             <DirectionMap

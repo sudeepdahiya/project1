@@ -21,6 +21,7 @@ class DirectionForm extends Component {
   onFormCancel = () => {
     this.refs.fromInput.setValue("")
     this.refs.toInput.setValue("")
+    this.props.onReset();
   }
 
   render() {
@@ -38,9 +39,10 @@ class DirectionForm extends Component {
             ref="toInput"
           />
         </div>
+        {this.props.children}
         <div className="row">
           <div className="col-sm-6 col-lg-6">
-            <input type="button" className="btn-primary" value="Submit" onClick={() => {
+            <input type="button" className="btn-primary" value={this.props.submitBtnText} onClick={() => {
               this.onFormSubmit();
             }} />
           </div>
