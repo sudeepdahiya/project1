@@ -2,13 +2,17 @@ import React from 'react';
 import maps from "./../../service/googleMap"
 
 import './../../assets/css/inputbox.css'
-
+/**
+ * @description Inputbox for google location search
+ */
 export default class GoogleMapTextBox extends React.Component {
     constructor() {
         super();
         this.state = { value: "" }
     }
-
+    /**
+     * @description make input box as autocomplete
+     */
     componentDidMount() {
         this.autoComplete();
     }

@@ -1,7 +1,9 @@
 import GoogleMapsLoader from 'google-maps';
 
 import { googleAPIKey } from '../config/apiConstant';
-
+/**
+ * @description setting google map
+ */
 GoogleMapsLoader.KEY = googleAPIKey;
 GoogleMapsLoader.LIBRARIES = ['geometry', 'places'];
 

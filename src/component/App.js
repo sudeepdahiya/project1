@@ -8,13 +8,18 @@ import DirectionMap from "./map/DirectionMap";
 import { SUCCESS, IN_PROGRESS, ERROR } from "./../config/apiConstant"
 
 import './../assets/css/app.css'
-
+/*
+Main Container that control the state of application
+*/
 class App extends Component {
   constructor() {
     super();
     this.state = { isLoader: false, direction: null, token: null };
   }
-
+  /** 
+  @description Submit the user inputs to the server
+  @param JSON object
+  */
   formSubmit = async (formData) => {
     this.setState({ isLoader: true })
     var result = await submitDirection(formData).catch(err => alert('Internal Server Error'));
@@ -24,7 +29,9 @@ class App extends Component {
       this.setState({ isLoader: false })
     }
   }
-
+  /**
+   * @description get direction detail from the server using token
+   */
   getDirection = async () => {
     this.setState({ isLoader: true })
     var direction = await getDirection(this.state.token).catch(err => alert('Internal Server Error'));
@@ -37,7 +44,9 @@ class App extends Component {
     }
     this.setState({ isLoader: false })
   }
-
+  /**
+   * @description reset the direction detail and token
+   */
   resetApp = () => {
     this.setState({ direction: null, token: null })
   }

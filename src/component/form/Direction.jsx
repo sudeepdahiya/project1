@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import GoogleMapTextBox from "../button/GoogleMapTextBox"
-
+/**
+ * @description DirectionForm is a from where user can enter locations.
+ */
 class DirectionForm extends Component {
 
+  /**
+   * call onSubmit callback function on submitting form
+   */
   onFormSubmit = () => {
     const { onSubmit } = this.props;
     let formData = {};
@@ -10,7 +15,9 @@ class DirectionForm extends Component {
     formData.to = this.refs.toInput.getValue();
     onSubmit(formData);
   }
-
+  /**
+   * @description Set null or blank value in all fields of form
+   */
   onFormCancel = () => {
     this.refs.fromInput.setValue("")
     this.refs.toInput.setValue("")

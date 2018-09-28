@@ -9,7 +9,9 @@ class DirectionMap extends React.Component {
     componentDidMount() {
         this.initMap();
     }
-
+    /**
+     * intial value of google map
+     */
     initMap = async () => {
         this.maps = await this.props.maps();
 
@@ -22,7 +24,9 @@ class DirectionMap extends React.Component {
     preparePositionsFromPath = path => {
         return path.map(([lat, lng]) => new this.maps.LatLng(lat, lng));
     };
-
+    /**
+     * @description showing direction on google map
+     */
     showDirections = ({ path }) => {
         const directionsService = new this.maps.DirectionsService();
         const directionsRenderer = new this.maps.DirectionsRenderer();
@@ -62,7 +66,9 @@ class DirectionMap extends React.Component {
             }  
         }
     }
-
+    /**
+     * @description checking the prev props and the new props are same or not.
+     */
     shouldComponentUpdate(nextProps){
         const {directions} = this.props;
         if(nextProps.directions && nextProps.directions.path && directions && directions.path){
@@ -77,7 +83,9 @@ class DirectionMap extends React.Component {
         }
         return true;
     }
-
+    /**
+     * @description to check wheather it going to update map or reset the map 
+     */
     getSnapshotBeforeUpdate(prevProps) {
         const {directions} = this.props;
         if(prevProps.directions !== directions){
