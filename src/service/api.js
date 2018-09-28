@@ -6,7 +6,7 @@ const client = axios.create({
 });
 
 export const submitDirection = data => {
-    return client.post(ROUTE_API);
+    return client.post(ROUTE_API,data);
 }
 
 export const getDirection = (token) => {
