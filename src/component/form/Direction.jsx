@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import GoogleMapTextBox from "../button/GoogleMapTextBox"
+import GoogleMapTextBox from "../inputbox/GoogleMapTextBox"
 /**
  * @description DirectionForm is a from where user can enter locations.
  */
